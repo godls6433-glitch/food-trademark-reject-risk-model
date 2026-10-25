@@ -1,0 +1,13 @@
+# 원천 데이터·중간 산출물은 올리지 않음 (KIPRIS 이용약관 제16조)
+*.csv
+*.xlsx
+*.zip
+*.pkl
+*.joblib
+work/
+team_preds/
+data/raw/
+# 예외: 예시 30줄과 집계 결과표
+!data/sample/*.csv
+!evaluation/results/*.csv
+!models/rej_type/feature_importance.csv
