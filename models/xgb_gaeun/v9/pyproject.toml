@@ -1,0 +1,28 @@
+[project]
+name = "trademark-risk"
+version = "9.0.0"
+description = "식음료 상표 출원 전 거절 위험 추정 (선행상표 검색 + XGBoost/로지스틱 혼합 모델)"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+
+[tool.ruff]
+line-length = 140
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B905"]  # zip(strict=)는 길이가 같은 것이 자명한 곳에서 소음이 된다

@@ -1,0 +1,26 @@
+# 산출물·원자료는 올리지 않는다 (용량, KIPRIS 원문·출원인 정보)
+artifacts/
+*.parquet
+*.joblib
+*.xlsx
+*.log
+
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+.DS_Store
+.env
+
+# 팀 공유용 집계표
+!/v9/docs/v9_shared_correlation/feature_summary.csv
+!/v9/docs/v9_shared_correlation/pairs.csv
+!/v9/docs/v9_team_holdout/metrics.csv
+!/v9/docs/v9_team_reduced/metrics.csv
+!/v9/docs/v9_team_reduced/auc_intervals.csv
+!/v9/docs/v9_team_5fold/metrics.csv
+!/v9/docs/v9_team_5fold/fold_metrics.csv
+!/v9/docs/v9_outcome_cutoff/metrics.csv
+!/v9/docs/v9_final_rf_protocol/metrics.csv
+!/v9/docs/v9_final_rf_protocol/fold_metrics.csv
